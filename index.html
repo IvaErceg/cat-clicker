@@ -6,29 +6,50 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: column;
                 height: 100vh;
                 background-color: #4D4433;
+            }
+            section {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 10px;
             }
 
             img {
                 border: 20px solid orange;
-                border-radius: 50%;
+                border-radius: 100%;
+                width: 400px;
+                height: 400px;
             }
+
             p {
                 font-size: 24px;
                 font-family: Arial, Helvetica, sans-serif;
             }
-            span {
+            .name, .count {
                 color: orange;
+            }
+
+            .name {
+                font-weight: bold;
+                font-size: 30px;
             }
 
         </style>
         <title>Cat clicker</title>
     </head>
     <body>
-        <img src="cat.jpg">
-        <p>Count: <span id="count">0</span></p>
+        <section id="first">
+            <p class="name"></p>
+            <img src="cat.jpg">
+            <p>Count: <span class="count">0</span></p>
+        </section>
+        <section id="second">
+            <p class="name"></p>
+            <img src="cat2.jpg">
+            <p>Count: <span class="count">0</span></p>
+        </section>
         <script src="app.js"></script>
     </body>
 </html>

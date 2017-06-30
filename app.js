@@ -1,6 +1,16 @@
-const img = document.querySelector('img');
-const counter = document.querySelector('#count');
+const img = document.querySelectorAll('img');
+const counter = document.querySelectorAll('.count');
+const name = document.querySelectorAll(".name");
+name[0].innerHTML = 'Charlie';
+name[1].innerHTML = 'Clover';
+let imagesArray = Array.prototype.slice.call(img);
 
-img.addEventListener('click', function() {
-    counter.innerHTML++;
-});d
+for(let  i = 0; i < imagesArray.length; i++) {
+    imagesArray[i].addEventListener('click', updateCount);
+    
+};
+
+function updateCount() {
+    let index = imagesArray.indexOf(this);
+    counter[index ].innerHTML++;
+}
